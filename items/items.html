@@ -12,48 +12,54 @@
 <style>
 .flex-container{
   display: flex;
+  flex-flow: row wrap;
+ 
 }
 
- /* flex-grow 1 tamaño identico para todos los elementos */
-.flex-item{
-    order: 3;
-}
+ /* flex-grow 1 tamaño identico para todos los elementos 
+    order ordena el inicio del elemento
+    flex-basis : auto => el tamaño del elemento será igual al contenido.
+    flex-shrink: 1 =>el elemento se reducirá cuando cambie el tamaño de la ventana del navegador
+ */
 
 .item1 {
-    flex-grow: 1; 
+  flex-shrink: 1;
+  order: 2;
  }
 .item2{
   flex-grow: 2;
-}
-.item3{
-  flex-grow: 3;
-  align-items: flex-end;
+  flex-basis : auto;
 }
 
 .flex-item:nth-child(3){
-    font-size:1rem;
-    line-height:1.2rem;
-    align-self: flex-start;
+  flex-grow: 3;
+
 }
 
-.flex-item:nth-child(2) {
-    align-self : flex-end;
+.flex-item:nth-child(4){
+ flex-basis: 2%;
+
+}
+
+/* flex-grow, flex-shrink y flex-basis. en una sola linea*/
+.flex-item:nth-child(5) {
+    flex: 20cm;
 }
 
 </style>
 
 <body>
   <h1>Items flexbox</h1>
+  
   <div class="flex-container">
       <div class="flex-item item1">1</div>
       <div class="flex-item item2">2</div>
-      <div class="flex-item item3">3</div>
+      <div class="flex-item">3</div>
       <div class="flex-item">4</div>
       <div class="flex-item">5</div>
-      
+      <div class="flex-item">6</div>
   </div>
-  
-  
+
 </body>
 
 </html>

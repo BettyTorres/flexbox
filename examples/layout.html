@@ -1,5 +1,14 @@
-<!doctype html>
-<title>Example</title>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link  rel="stylesheet" href="../styles/style.css" >
+
+  <title>Flexbox</title>
+</head>
+
 <style>
   * {
    box-sizing: border-box; 
@@ -9,33 +18,43 @@
   }
   #main {
     display: flex;
-    min-height: calc(100vh - 40vh);
+    min-height: calc(100vh - 20vh);
   }
   #main > article {
-    flex: 1;
+    flex-flow: row wrap;
   }
-  #main > nav, 
-  #main > aside {
-    flex: 0 0 20vw;
-    background: beige;
+  #main > nav {
+    flex: 0 0 15vw;
+    background: rgb(50, 100, 122);
   }
   #main > nav {
     order: -1;
   }
-  header, footer, article, nav, aside {
+  header, footer, article, nav {
     padding: 1em;
   }
   header, footer {
     background: yellowgreen;
-    height: 20vh;
+    height: 10vh;
   }
+
+  .item1 {
+    flex-basis : 200px;
+}
+
 </style>
+
 <body>
   <header>Header</header>
   <div id="main">
-    <article>Article</article>
-    <nav>Nav</nav>
-    <aside>Aside</aside>
+    <article>
+      <h3> Hola mundo !!</h3>
+        <div class="flex-item item1">item 1</div>
+    </article>
+    <nav>Navegación</nav>
   </div>
   <footer>Footer</footer>
 </body>
+
+
+</html>
