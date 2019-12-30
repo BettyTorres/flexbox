@@ -1,6 +1,5 @@
-# flexbox
-Flexbox base
-Flexbox
+# Flexbox
+
 Flexbox es un sistema de elementos flexibles personaliza ble, en la que los elementos se adaptan y es más fácil personalizar los diseños. Diseñado para crear estructuras de una sola dimensión.
 
 Conceptos básicos 
