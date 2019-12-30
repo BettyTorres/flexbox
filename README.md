@@ -56,7 +56,7 @@ Sirve para indicar si queremos que haya saltos de línea en los elementos que se
 
 - nowrap (predeterminado): hace que nunca se produzcan saltos de línea.
 - wrap: hace que si no caben, entonces se coloquen en la siguiente línea.
-- wrap-reverse: El salto de línea se producirá al contrario, o sea, hacia arriba.
+- wrap-reverse: El salto de línea se producirá al contrario, o sflea, hacia arriba.
 
 
 Propiedad flex-flow
@@ -95,11 +95,90 @@ Esta propiedad sólo aplica cuando dispones de varias líneas de elementos en el
 
 Items Flexbox
 
+ropiedades que afectan a los ítems
+
 
 Propiedad flex-grow
 
 La propiedad flex-grow sirve para decir cómo deben crecer los elementos incluidos en el contenedor.
 
 
-![](https://paper-attachments.dropbox.com/s_3EB164AEBE23197C4F8586483D72E967BACFEA471F935A2A9F1D6620D4C73D53_1577675183732_image.png)
+![](https://paper-attachments.dropbox.com/s_3EB164AEBE23197C4F8586483D72E967BACFEA471F935A2A9F1D6620D4C73D53_1577726107268_image.png)
 
+Propiedad order
+
+No necesita muchas explicaciones. Admite un valor numérico entero y sirve para aplicar un orden puramente arbitrario en la disposición de los elementos.
+
+
+Propiedad flex-shrink
+
+Sirve para indicar que ciertos ítems deben encoger su tamaño. El valor predeterminado de flex-shrink es de 1. 
+
+
+Propiedad flex-basis
+
+Esta propiedad sirve para modificar las dimensiones de los elementos atendiendo a varias posibilidades.  Define tamaño predeterminado de un elemento.
+
+
+Propiedad flex
+
+Esta no agrega nada nuevo. Es solo un atajo para escribir en una sola línea de código CSS las propiedades flex-grow, flex-shrink y flex-basis. El valor por defecto de esta propiedad es "0 1 auto".
+
+
+    .flex-item:nth-child(5) {
+        flex: 10mm 0 2;
+    }
+
+
+![](https://paper-attachments.dropbox.com/s_3EB164AEBE23197C4F8586483D72E967BACFEA471F935A2A9F1D6620D4C73D53_1577726834652_image.png)
+
+
+
+Layout
+![](https://paper-attachments.dropbox.com/s_3EB164AEBE23197C4F8586483D72E967BACFEA471F935A2A9F1D6620D4C73D53_1577730722828_image.png)
+
+
+
+    <style>
+      * {
+       box-sizing: border-box; 
+      }
+      body {
+        margin: 0;
+      }
+      #main {
+        display: flex;
+        min-height: calc(100vh - 20vh);
+      }
+      #main > article {
+        flex-flow: row wrap;
+      }
+      #main > nav {
+        flex: 0 0 15vw;
+        background: rgb(50, 100, 122);
+      }
+      #main > nav {
+        order: -1;
+      }
+      header, footer, article, nav {
+        padding: 1em;
+      }
+      header, footer {
+        background: yellowgreen;
+        height: 10vh;
+      }
+      .item1 {
+        flex-basis : 200px;
+    }
+    </style>
+    <body>
+      <header>Header</header>
+      <div id="main">
+        <article>
+          <h3> Hola mundo !!</h3>
+            <div class="flex-item item1">item 1</div>
+        </article>
+        <nav>Navegación</nav>
+      </div>
+      <footer>Footer</footer>
+    </body>
