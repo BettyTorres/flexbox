@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link  rel="stylesheet" href="../styles/style.css" >
+
+  <title>Flexbox</title>
+</head>
+
+<style>
+  /* flex-direction: row || column || row-reverse || column-reverse
+     flex-wrap: nowrap todos en el mismo renglo =>  wrap los envia al siguente renglon
+     justify-content: flex-start, center, space-between => ajusta contenido
+    */
+  .flex-container{
+    display: flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items: center;
+  }
+
+</style>
+
+<body>
+  <h1>Contenedor flexbox</h1>
+  <div class="flex-container">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+      <div class="flex-item">4</div>
+      <div class="flex-item">5</div>
+      <div class="flex-item">6</div>
+  </div>
+  
+  
+</body>
+
+</html>

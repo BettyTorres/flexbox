@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link  rel="stylesheet" href="../styles/style.css" >
+
+  <title>Flexbox</title>
+</head>
+
+<style>
+.flex-container{
+  display: flex;
+}
+
+ /* flex-grow 1 tamaño identico para todos los elementos */
+.flex-item{
+    order: 3;
+}
+
+.item1 {
+    flex-grow: 1; 
+ }
+.item2{
+  flex-grow: 2;
+}
+.item3{
+  flex-grow: 3;
+  align-items: flex-end;
+}
+
+.flex-item:nth-child(3){
+    font-size:1rem;
+    line-height:1.2rem;
+    align-self: flex-start;
+}
+
+.flex-item:nth-child(2) {
+    align-self : flex-end;
+}
+
+</style>
+
+<body>
+  <h1>Items flexbox</h1>
+  <div class="flex-container">
+      <div class="flex-item item1">1</div>
+      <div class="flex-item item2">2</div>
+      <div class="flex-item item3">3</div>
+      <div class="flex-item">4</div>
+      <div class="flex-item">5</div>
+      
+  </div>
+  
+  
+</body>
+
+</html>
